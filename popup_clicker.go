@@ -1,4 +1,4 @@
-// popup_clicker.go
+//go:generate goversioninfo -icon=app.ico -manifest=popup_clicker.exe.manifest
 package main
 
 import (

@@ -1,14 +1,14 @@
 {
   "FixedFileInfo": {
     "FileVersion": {
-      "Major": 0,
-      "Minor": 1,
+      "Major": 1,
+      "Minor": 0,
       "Patch": 0,
       "Build": 0
     },
     "ProductVersion": {
-      "Major": 0,
-      "Minor": 1,
+      "Major": 1,
+      "Minor": 0,
       "Patch": 0,
       "Build": 0
     },
@@ -19,14 +19,25 @@
     "FileSubtype": "00"
   },
   "StringFileInfo": {
+    "Comments": "Test file.",
     "CompanyName": "CEA",
     "FileDescription": "popup_clicker",
     "FileVersion": "1.0.0.0",
-    "InternalName": "popup_clicker",
+    "InternalName": "popup_clicker.exe",
     "LegalCopyright": "© 2025 Antoine Marchal",
-    "OriginalFilename": "popup_clicker.exe",
+    "LegalTrademarks": "",
+    "OriginalFilename": "popup_clicker.go",
+    "PrivateBuild": "",
     "ProductName": "popup_clicker",
-    "ProductVersion": "1.0.0.0"
+    "ProductVersion": "1.0.0.0",
+    "SpecialBuild": ""
   },
-  "IconPath": "app.ico"
+  "VarFileInfo": {
+        "Translation": {
+            "LangID": "0409",
+            "CharsetID": "04B0"
+        }
+    },
+  "IconPath": "app.ico",
+  "ManifestPath": ""
 }
