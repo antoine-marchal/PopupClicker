@@ -8,6 +8,7 @@ import (
 	"runtime"
 	"strings"
 	"syscall"
+	"time"
 	"unsafe"
 
 	"github.com/lxn/win"
@@ -20,7 +21,10 @@ const (
 	EVENT_SYSTEM_FOREGROUND = 0x0003
 	EVENT_OBJECT_CREATE     = 0x8000
 
-	BM_CLICK = 0x00F5
+	BM_CLICK   = 0x00F5
+	WM_KEYDOWN = 0x0100
+	WM_KEYUP   = 0x0101
+	VK_RETURN  = 0x0D
 )
 
 // defaults if .ini missing / keys absent
@@ -146,6 +150,14 @@ func winEventProc(hWinEventHook win.HWINEVENTHOOK, event uint32, hwnd win.HWND, 
 	// fallback
 	win.PostMessage(hwnd, win.WM_COMMAND, 1, 0)
 	log.Printf("Posted WM_COMMAND to hwnd=0x%x\n", hwnd)
+
+	if win.SetForegroundWindow(hwnd) {
+		// tiny pause to help the OS set focus
+		time.Sleep(50 * time.Millisecond)
+	}
+	win.PostMessage(hwnd, WM_KEYDOWN, uintptr(VK_RETURN), 0)
+	win.PostMessage(hwnd, WM_KEYUP, uintptr(VK_RETURN), 0)
+	log.Printf("Posted ENTER to hwnd=0x%x\n", hwnd)
 }
 
 func main() {
