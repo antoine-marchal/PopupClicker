@@ -1,0 +1,32 @@
+{
+  "FixedFileInfo": {
+    "FileVersion": {
+      "Major": 0,
+      "Minor": 1,
+      "Patch": 0,
+      "Build": 0
+    },
+    "ProductVersion": {
+      "Major": 0,
+      "Minor": 1,
+      "Patch": 0,
+      "Build": 0
+    },
+    "FileFlagsMask": "3f",
+    "FileFlags": "00",
+    "FileOS": "040004",
+    "FileType": "01",
+    "FileSubtype": "00"
+  },
+  "StringFileInfo": {
+    "CompanyName": "CEA",
+    "FileDescription": "popup_clicker",
+    "FileVersion": "1.0.0.0",
+    "InternalName": "popup_clicker",
+    "LegalCopyright": "© 2025 Antoine Marchal",
+    "OriginalFilename": "popup_clicker.exe",
+    "ProductName": "popup_clicker",
+    "ProductVersion": "1.0.0.0"
+  },
+  "IconPath": "app.ico"
+}
